@@ -1,0 +1,50 @@
+/* Header.css */
+
+.app-bar {
+  background-color: #1B3B89;
+}
+
+.toolbar {
+  width: 88vw;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 96px;
+  background-color: #1B3B89;
+}
+
+.typography-title {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper-container {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1rem;
+  gap: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.avatar {
+  width: 22px;
+  height: 22px;
+  background-color: #1B3B89;
+}
+
+.typography-text {
+  font-weight: bold;
+  color: #1B3B89;
+}

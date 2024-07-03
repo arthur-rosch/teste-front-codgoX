@@ -1,0 +1,92 @@
+/* AsideBar.css */
+
+.aside-bar {
+  background-color: #1B3B89;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.aside-bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.aside-bar-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.aside-bar-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 9999px;
+  padding-left: 0.5rem;
+  width: 11rem;
+  height: 2.5rem;
+  gap: 1rem;
+  color: white;
+  background-color: #1B3B89;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button-contained {
+  background-color: white !important;
+  color: #163276 !important;
+}
+
+.nav-button:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.nav-link.active .nav-button {
+  background-color: white !important;
+  color: #163276 !important;
+}
+
+.nav-link.inactive .nav-button {
+  background-color: #1B3B89 !important;
+  color: white !important;
+}
+
+.aside-bar-logout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}

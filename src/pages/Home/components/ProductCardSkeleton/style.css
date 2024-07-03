@@ -1,0 +1,24 @@
+.product-card-skeleton {
+  width: 18rem;
+  border-radius: 20px;
+  border: 1px solid #E5E7EB;
+  overflow: hidden;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.product-card-details-skeleton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+}
+
+.product-card-title-skeleton {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

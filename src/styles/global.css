@@ -1,0 +1,58 @@
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+input,
+textarea,
+button,
+select,
+div,
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  transition: all 50ms linear;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+  padding-top: 10px;
+  background-color: #F4F4F4;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #163276;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
