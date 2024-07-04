@@ -1,14 +1,16 @@
+import './style.css'
+import { useCart } from '@/hooks'
+import { useNavigate } from 'react-router-dom'
 import { AccountCircle, ShoppingCart } from '@mui/icons-material/'
 import { AppBar, Toolbar, Typography, Paper, Badge } from '@mui/material'
-import './style.css'
-import { useState } from 'react'
 
 interface HeaderProps {
   text: string
 }
 
 export function Header({ text }: HeaderProps) {
-  const [cartItemsCount] = useState(3)
+  const { state } = useCart()
+  const navigate = useNavigate()
 
   return (
     <AppBar position="sticky" className="app-bar">
@@ -17,8 +19,8 @@ export function Header({ text }: HeaderProps) {
           {text}
         </Typography>
         <div className="buttons-container">
-          <Paper className="paper-container">
-            <Badge badgeContent={cartItemsCount} color="primary">
+          <Paper className="paper-container" onClick={() => navigate('/cart')}>
+            <Badge badgeContent={state.items.length} color="primary">
               <ShoppingCart sx={{ color: '#1B3B89', bgcolor: 'white' }} />
             </Badge>
           </Paper>

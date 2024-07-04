@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { FC, useEffect, useState } from 'react'
-import { ViewInAr, ExitToApp } from '@mui/icons-material'
+import { ViewInAr, ExitToApp, AddShoppingCart } from '@mui/icons-material'
 import { Box, Button, List, ListItem, Typography } from '@mui/material'
 import './style.css'
 
@@ -15,9 +15,7 @@ export const AsideBar: FC = () => {
     return () => window.removeEventListener('popstate', handleLocationChange)
   }, [])
 
-  const handleLogout = () => {
-    // Implement your logout logic here
-  }
+  const handleLogout = () => {}
 
   const navigationLinks = [
     {
@@ -29,6 +27,19 @@ export const AsideBar: FC = () => {
             width: 28,
             height: 28,
             color: currentScreen === '/' ? '#163276' : '#fff',
+          }}
+        />
+      ),
+    },
+    {
+      path: '/cart',
+      title: 'Carrinho',
+      icon: (
+        <AddShoppingCart
+          sx={{
+            width: 28,
+            height: 28,
+            color: currentScreen === '/cart' ? '#163276' : '#fff',
           }}
         />
       ),

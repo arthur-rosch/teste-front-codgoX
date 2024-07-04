@@ -1,0 +1,30 @@
+.cart-container {
+  padding: 16px;
+}
+
+.cart-item {
+  margin-bottom: 16px;
+}
+
+.cart-item-image {
+  width: 100%;
+  height: auto;
+}
+
+.cart-summary {
+  padding: 16px;
+  text-align: center;
+}
+
+.checkout-button {
+  margin-top: 16px;
+}
+
+.cart-items-container {
+  overflow-y: auto;
+  max-height: 900px; /* Defina a altura máxima desejada */
+}
+
+.scrollable-content {
+  padding-right: 20px; /* Adiciona um padding para evitar que o conteúdo seja cortado pelo scroll */
+}

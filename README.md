@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Projeto React com TypeScript e Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto simples utilizando React, TypeScript, Vite, Material UI, Context API, React Router DOM e useReducer.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto consiste em três telas principais:
 
-## Expanding the ESLint configuration
+1. **Tela de Home:**
+   * Exibe uma lista de produtos.
+   * Utiliza um skeleton de loading por 3 segundos antes de exibir os produtos.
+   * Feedback de alerta Material UI ao adicionar produtos do carrinho.
+2. **Tela de Detalhes do Produto:**
+   * Mostra detalhes específicos de um produto selecionado.
+   * Utiliza um skeleton de loading durante o carregamento dos detalhes.
+3. **Tela do Carrinho:**
+   * Lista todos os produtos adicionados ao carrinho.
+   * Permite remover produtos do carrinho.
+   * Após finalizar a compra, exibe um modal indicando o sucesso da transação.
+   * Utiliza feedback de alerta Material UI para operações no carrinho.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Estrutura do Projeto
 
-- Configure the top-level `parserOptions` property like this:
+* **`src/`** : Diretório principal do código-fonte.
+* **`components/`** : Componentes React reutilizáveis.
+* **`pages/`** : Componentes que representam cada tela.
+* **`context/`** : Configuração da Context API.
+* **`router/`** : Configuração da Rotas.
+* **`utils/`** : Funções utilitárias.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Instalação e Uso
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#Clonar projeto
+git clone https://github.com/arthur-rosch/teste-front-codgoX.git
+cd teste-front-codgoX
+
+#Instalar dependencias
+npm install
+
+#Rodar o projeto
+npm run dev
+```

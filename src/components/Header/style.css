@@ -36,12 +36,14 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+  cursor: pointer;
 }
 
 .avatar {
   width: 22px;
   height: 22px;
   background-color: #1B3B89;
+  cursor: pointer;
 }
 
 .typography-text {

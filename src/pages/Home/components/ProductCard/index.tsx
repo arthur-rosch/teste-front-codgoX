@@ -2,22 +2,32 @@ import './style.css'
 import { Item } from '@/utils/utils'
 import { FC, useState } from 'react'
 import { AlertUi } from '@/components'
-import { Button, Typography } from '@mui/material'
+import { useCart } from '@/hooks/useCart'
+import { useNavigate } from 'react-router-dom'
+import { Button, Typography, Grid } from '@mui/material'
 
 interface ProductCardProps {
   product: Item
 }
 
 export const ProductCard: FC<ProductCardProps> = ({ product }) => {
+  const navigate = useNavigate()
+  const { addToCart, state } = useCart()
   const [alertOpen, setAlertOpen] = useState(false)
 
   const handleAddProductInCart = () => {
+    addToCart(product, 1)
     setAlertOpen(true)
-    console.log(alertOpen)
     setTimeout(() => {
       setAlertOpen(false)
     }, 3000)
   }
+
+  const handleViewDetails = () => {
+    navigate('/product/' + product.id)
+  }
+
+  console.log(state)
 
   return (
     <>
@@ -39,15 +49,30 @@ export const ProductCard: FC<ProductCardProps> = ({ product }) => {
               {product.nome}
             </Typography>
           </div>
-
-          <Button
-            className="buy-button"
-            variant="contained"
-            color="primary"
-            onClick={handleAddProductInCart}
-          >
-            Comprar
-          </Button>
+          <Grid container spacing={1}>
+            <Grid item xs={9}>
+              <Button
+                className="buy-button"
+                variant="contained"
+                color="primary"
+                onClick={handleAddProductInCart}
+                fullWidth
+              >
+                Comprar
+              </Button>
+            </Grid>
+            <Grid item xs={3}>
+              <Button
+                className="buy-button"
+                variant="contained"
+                color="primary"
+                onClick={handleViewDetails}
+                fullWidth
+              >
+                Info
+              </Button>
+            </Grid>
+          </Grid>
         </div>
       </Button>
       <AlertUi
