@@ -1,6 +1,4 @@
-# Projeto React com TypeScript e Vite
 
-Este é um projeto simples utilizando React, TypeScript, Vite, Material UI, Context API, React Router DOM e useReducer.
 
 ## Funcionalidades
 
